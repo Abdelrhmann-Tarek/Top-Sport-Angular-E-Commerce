@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global light mode (default) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Global dark mode */
+body.dark-mode {
+  background-color: #333333;
+  color: white;
+}
+
+/* Navbar style change in dark mode */
+body.dark-mode .navbar {
+  background-color: #333333;
+  color: white;
+}
+
+body .navbar {
+  background-color: #f8f9fa; /* light by default */
+}
