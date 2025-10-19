@@ -1,38 +1,25 @@
-<div class="container d-flex justify-content-center">
-  <figure class="card card-product-grid card-lg">
-    <a href="#" class="img-wrap" data-abc="true"> <img src="./product8.jpg" /> </a>
-    <figcaption class="info-wrap">
-      <div class="row">
-        <div class="col-md-6 col-xs-6">
-          <a href="#" class="title" data-abc="true">Dell Xtreme 270</a>
-          <span class="rated">Laptops</span>
-        </div>
-        <div class="col-md-3 col-xs-3">
-          <div class="rating text-right">
-            <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i> <span class="rated">Rated 4.0/5</span>
-          </div>
-        </div>
-      </div>
-    </figcaption>
-    <div class="bottom-wrap-payment">
-      <figcaption class="info-wrap">
-        <div class="row">
-          <div class="col-md-6 col-xs-6">
-            <a href="#" class="title" data-abc="true">$3,666</a>
-            <span class="rated">VISA Platinum</span>
-          </div>
-          <div class="col-md-3 col-xs-3">
-            <div class="rating text-right">#### 8787</div>
-          </div>
-        </div>
-      </figcaption>
-    </div>
-    <div class="bottom-wrap">
-      <a href="#" class="btn btn-primary float-right" data-abc="true"> Buy now </a>
-      <div class="price-wrap">
-        <a href="#" class="btn btn-warning float-left" data-abc="true"> Cancel </a>
+<!-- <div class="card" style="width: 18rem">
+  <img src="./product8.jpg" class="card-img-top" />
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h3>sss</h3>
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col-md-4" *ngFor="let card of cards">
+    <div class="card" style="width: 18rem">
+      <img [src]="card.image" class="card-img-top" />
+      <div class="card-body">
+        <h5 class="card-title">{{ card.title }}</h5>
+        <h3>{{ card.department }}</h3>
+        <p class="card-text">{{ card.description }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
-  </figure>
+  </div>
 </div>
