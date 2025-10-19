@@ -20,7 +20,7 @@ export class Card {
   ];
   selectedDepartment: string = 'All';
 
-  
+
    get departments() {
     return ['All', ...new Set(this.cards.map(card => card.department))];
   }
@@ -32,5 +32,3 @@ export class Card {
   }
 
 }
-
-  
