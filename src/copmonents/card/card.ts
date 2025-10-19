@@ -30,5 +30,9 @@ export class Card {
       ? this.cards
       : this.cards.filter(card => card.department === this.selectedDepartment);
   }
+  
+// selectDepartment(dept: string) {
+//   this.selectedDepartment = dept;
+// }
 
 }
