@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Slider } from "../slider/slider";
+import { Grid } from "../grid/grid";
 
 @Component({
   selector: 'app-home',
-  imports: [Slider],
+  imports: [Slider, Grid],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
