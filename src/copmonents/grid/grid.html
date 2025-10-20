@@ -3,7 +3,7 @@
     <div class="col"><app-card /></div>
   </div>
 </div> -->
-<div class="mb-3">
+<!-- <div class="mb-3">
   <label class="form-label"><strong>Choose category:</strong></label>
   <select class="form-select" [(ngModel)]="selectedDepartment">
     <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
@@ -14,4 +14,39 @@
   <div class="col-md-4 mb-4" *ngFor="let product of filteredProducts">
     <app-card [card]="product"></app-card>
   </div>
+</div> -->
+
+<div class="container mt-5">
+  <h2>Our Products</h2>
+
+  <div>
+    <div class="btn-group mb-4" role="group" aria-label="Category filter">
+      @for (category of categories; track $index) {
+      <button
+        type="button"
+        class="btn btn-outline-primary"
+        (click)="selectedCategory = category"
+        [class.active]="selectedCategory === category"
+      >
+        {{ category }}
+      </button>
+      }
+    </div>
+  </div>
+  <div class="row g-4">
+    @for (product of getProductsByCategory(); track $index) {
+    <div class="col-lg-3 col-md-4 col-sm-6 d-flex">
+      <app-card class="w-100" [product]="product"></app-card>
+    </div>
+    }
+  </div>
+
+  <!-- <div class="row">
+    @for (product of getProductsByCategory(); track $index) {
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
+      <app-card [product]="product" />
+    </div>
+    }
+  </div>
+</div> -->
 </div>

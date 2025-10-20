@@ -127,107 +127,62 @@ a {
 .fa {
   color: #ff5722;
 } */
-body {
-  background-color: #eeeeee;
-}
 
-/* Center the card */
-.container {
+/* /////////////////////////////////// */
+.product-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 40px;
+  flex-direction: column;
+  height: 100%;
 }
 
-/* Main card style */
-.card {
-  width: 320px; /* slightly wider for better layout */
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  background: #fff;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: 0.3s ease;
-}
-/* 
-.card:hover {
+.product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-} */
-
-/* Image container */
-.img-wrap {
-  width: 100%;
-  height: 220px; /* fixed consistent height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8f8f8;
-  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Make the image fit nicely */
-.img-wrap img {
+.product-image-container {
+  width: 100%;
+  height: 200px; /* Adjust this value to control image height */
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  flex: 1.5;
+}
+
+.product-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* crop image to fill without stretching */
-  border-radius: 0;
-  transition: transform 0.3s ease;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.img-wrap img:hover {
+.product-card:hover .product-image {
   transform: scale(1.05);
 }
 
-/* Info section */
-.info-wrap {
-  padding: 16px 20px;
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
-.title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #212529;
-}
-
-.rated {
-  font-size: 0.85rem;
-  color: #777;
-}
-
-/* Bottom area */
-.bottom-wrap {
-  padding: 16px 20px;
-  border-top: 1px solid #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.btn {
-  font-weight: 600;
-  border-radius: 6px;
-  padding: 0.45rem 1rem;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: #3167eb;
-  color: white;
+.btn-custom {
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
   border: none;
+  transition: all 0.3s ease;
 }
 
-.btn-warning {
-  background-color: #ff9800;
-  color: white;
-  border: none;
+.btn-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
 }
 
-.btn:hover {
-  opacity: 0.9;
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
-
-.fa {
-  color: #ff9800;
+.p-3 {
+  flex: 1; /* content area */
 }
