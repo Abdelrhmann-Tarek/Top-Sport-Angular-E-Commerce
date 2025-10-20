@@ -2,10 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component,Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HoverCard } from '../../directive/hover-card';
-
+import { RatingPipe } from '../../pipes/rating-pipe'
 @Component({
   selector: 'app-card',
-  imports: [CommonModule,FormsModule, HoverCard],
+  imports: [CommonModule,FormsModule, HoverCard,RatingPipe],
   templateUrl: './card.html',
   styleUrl: './card.css'
 })

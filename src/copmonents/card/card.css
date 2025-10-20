@@ -186,3 +186,7 @@ a {
 .p-3 {
   flex: 1; /* content area */
 }
+.rating-stars i {
+  margin-right: 2px;
+  font-size: 1rem;
+}

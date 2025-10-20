@@ -31,7 +31,7 @@ constructor(){
       description: 'Away kit with breathable lightweight fabric and slim fit.',
       price: 89.99,
       imageUrl: 'product8.jpg',
-      rating: 4.6,
+      rating:1.7,
       category: 'Jersey',
     },
     {
