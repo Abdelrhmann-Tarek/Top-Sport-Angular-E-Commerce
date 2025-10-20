@@ -1,5 +1,17 @@
-<div class="container text-center">
+<!-- <div class="container text-center">
   <div class="row">
     <div class="col"><app-card /></div>
+  </div>
+</div> -->
+<div class="mb-3">
+  <label class="form-label"><strong>Choose category:</strong></label>
+  <select class="form-select" [(ngModel)]="selectedDepartment">
+    <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+  </select>
+</div>
+
+<div class="row">
+  <div class="col-md-4 mb-4" *ngFor="let product of filteredProducts">
+    <app-card [card]="product"></app-card>
   </div>
 </div>
