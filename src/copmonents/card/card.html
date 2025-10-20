@@ -24,6 +24,25 @@
   </div>
 </div> -->
 
+<!-- //////////////////////////////////////////////////////////////////////////////////// -->
+<!-- <div class="dropdown mb-3">
+  <button
+  class="btn btn-secondary dropdown-toggle"
+  type="button"
+  id="dropdownMenuButton"
+  data-bs-toggle="dropdown"
+  aria-expanded="false"
+  >
+  {{ selectedDepartment }}
+</button>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <li *ngFor="let dept of departments">
+    <a class="dropdown-item" href="#" (click)="selectDepartment(dept)">
+      {{ dept }}
+    </a>
+  </li>
+</ul>
+</div> -->
 <div class="mb-3">
   <label class="form-label"><strong>Choose category:</strong></label>
   <select class="form-select" [(ngModel)]="selectedDepartment">
@@ -31,28 +50,9 @@
   </select>
 </div>
 
-<!-- <div class="dropdown mb-3">
-  <button
-    class="btn btn-secondary dropdown-toggle"
-    type="button"
-    id="dropdownMenuButton"
-    data-bs-toggle="dropdown"
-    aria-expanded="false"
-  >
-    {{ selectedDepartment }}
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <li *ngFor="let dept of departments">
-      <a class="dropdown-item" href="#" (click)="selectDepartment(dept)">
-        {{ dept }}
-      </a>
-    </li>
-  </ul>
-</div> -->
-
 <div class="row">
   <div class="col-md-4" *ngFor="let card of filteredCards">
-    <div class="card" style="width: 18rem">
+    <div class="card" appHoverCard style="width: 18rem">
       <img [src]="card.image" class="card-img-top" />
       <div class="card-body">
         <h5 class="card-title">{{ card.title }}</h5>
