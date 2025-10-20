@@ -8,7 +8,7 @@ import { Footer } from "../copmonents/footer/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [NavBar, Slider, Grid, Footer],
+  imports: [NavBar, Slider, Grid, Footer, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
