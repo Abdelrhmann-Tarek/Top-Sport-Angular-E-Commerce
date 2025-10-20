@@ -155,7 +155,12 @@ constructor(){
 
 }
 
-
+getProductsByCategory(){
+  if(this.selectedCategory==='All'){
+    return this.products;
+  }
+  return this.products.filter(p=>p.category===this.selectedCategory);
+}
 
 
 
