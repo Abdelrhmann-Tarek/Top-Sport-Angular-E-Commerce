@@ -5,10 +5,11 @@ import { Slider } from "../copmonents/slider/slider";
 import { Grid } from "../copmonents/grid/grid";
 import { Card } from "../copmonents/card/card";
 import { Footer } from "../copmonents/footer/footer";
+import { ContactUs } from '../copmonents/contact-us/contact-us';
 
 @Component({
   selector: 'app-root',
-  imports: [NavBar, Slider, Grid, Footer, RouterOutlet, Card],
+  imports: [NavBar, Slider, Grid, Footer, RouterOutlet, Card,ContactUs],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

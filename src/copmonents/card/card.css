@@ -155,6 +155,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 12px;
   transition: transform 0.5s ease;
 }
 
@@ -163,7 +164,7 @@ a {
 }
 
 .price {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -189,4 +190,8 @@ a {
 .rating-stars i {
   margin-right: 2px;
   font-size: 1rem;
+}
+.discount-price {
+  font-size: 1.3rem;
+  color: green;
 }
