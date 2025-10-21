@@ -46,17 +46,16 @@ export class RatingPipe implements PipeTransform {
 
     // Full stars
     for (let i = 0; i < fullStars; i++) {
-      starsHtml += `<i class="fa-solid fa-star" style="color: #FFD43B;"></i>`;
-    }
+      starsHtml += `<i class="fa-solid fa-star star-icon" ></i>`}
 
     // Half star
     if (hasHalfStar) {
-      starsHtml += `<i class="fa-solid fa-star-half-stroke" style="color: #FFD43B;"></i>`;
+      starsHtml += `<i class="fa-solid fa-star-half-stroke star-icon" style="color: #FFD43B;"></i>`;
     }
 
     // Empty stars
     for (let i = 0; i < emptyStars; i++) {
-      starsHtml += `<i class="fa-regular fa-star" style="color: #FFD43B;"></i>`;
+      starsHtml += `<i class="fa-regular fa-star star-icon" ></i>`;
     }
 
     return starsHtml;

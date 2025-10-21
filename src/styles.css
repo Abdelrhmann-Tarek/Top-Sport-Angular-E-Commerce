@@ -19,3 +19,8 @@ body.dark-mode .navbar {
 body .navbar {
   background-color: #f8f9fa; /* light by default */
 }
+.star-icon {
+  color: #ffd43b !important;
+  font-size: 1rem;
+  margin-right: 3px;
+}

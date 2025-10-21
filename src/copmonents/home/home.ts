@@ -4,7 +4,7 @@ import { Grid } from "../grid/grid";
 
 @Component({
   selector: 'app-home',
-  imports: [Slider, Grid],
+  imports: [Slider],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
