@@ -14,7 +14,7 @@ export class Card implements OnInit {
   @Input() product!:IProduct;
     discountPrice: number | null = null;
   ngOnInit(): void {
-    console.log('Card component initialized with product:', this.product);
+   
   }
   applyDiscount() {
     const discountRate = 0.20; 
