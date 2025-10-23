@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../service/services/api-service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-posts',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './posts.html',
   styleUrl: './posts.css'
 })
