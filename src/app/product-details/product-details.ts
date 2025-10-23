@@ -2,10 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { IProduct } from '../../interface/iproduct';
 import { Product } from '../../service/services/product';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HoverCard } from '../../directive/hover-card';
+import { RatingPipe } from '../../pipes/rating-pipe';
+import { pipe } from 'rxjs';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-details',
-  imports: [],
+  imports: [HoverCard,RatingPipe,FormsModule,CommonModule],
   templateUrl: './product-details.html',
   styleUrl: './product-details.css'
 })
