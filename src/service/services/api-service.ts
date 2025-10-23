@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { IPosts } from '../../interface/iposts';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,9 @@ export class ApiService {
 
   }
 
-  getPosts():Observable<any>{
+  getPosts():Observable<IPosts[]>{
 
-    return this.httpClient.get('https://jsonplaceholder.typicode.com/posts')
+    return this.httpClient.get<IPosts[]>('https://jsonplaceholder.typicode.com/posts')
   }
   
 }
