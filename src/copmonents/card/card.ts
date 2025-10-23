@@ -20,4 +20,7 @@ export class Card implements OnInit {
     const discountRate = 0.20; 
     this.discountPrice = this.product.price - (this.product.price * discountRate);
   }
+  showDetails(id:number){
+
+  }
 }
