@@ -1,1 +1,27 @@
-<p>product-details works!</p>
+<div class="product-details-card bg-white rounded-4 shadow-sm p-4">
+  <!-- Product Image -->
+  <div class="text-center mb-4">
+    <img [src]="product?.imageUrl" class="product-image-details" alt="{{ product?.name }}" />
+  </div>
+
+  <!-- Product Info -->
+  <h2 class="fw-bold text-center mb-3">{{ product?.name }}</h2>
+  <p class="text-muted text-center">{{ product?.description }}</p>
+
+  <!-- Price (no discount shown) -->
+  <div class="text-center mb-4">
+    <span class="price fs-3 fw-bold">{{ product?.price }}</span>
+  </div>
+</div>
+
+<!-- <div class="container">
+    <app-product-card>
+        <h5>{{product?.name}}</h5>
+        <p>{{product?.price}}</p>
+        <p>{{product?.quantity}}</p>
+        <app-my-button (click)="back()">
+            Back
+        </app-my-button>
+    </app-product-card>
+
+</div> -->

@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HoverCard } from '../../directive/hover-card';
 import { RatingPipe } from '../../pipes/rating-pipe'
 import { IProduct } from '../../interface/iproduct';
+import { Product } from '../../service/services/product';
+import { Route, Router } from '@angular/router';
 @Component({
   selector: 'app-card',
   imports: [CommonModule,FormsModule, HoverCard,RatingPipe],
@@ -11,6 +13,9 @@ import { IProduct } from '../../interface/iproduct';
   styleUrl: './card.css'
 })
 export class Card implements OnInit {
+  constructor(productService:Product,private router:Router){
+
+  }
   @Input() product!:IProduct;
     discountPrice: number | null = null;
   ngOnInit(): void {
@@ -21,6 +26,6 @@ export class Card implements OnInit {
     this.discountPrice = this.product.price - (this.product.price * discountRate);
   }
   showDetails(id:number){
-
+      this.router.navigate(['product-details' ,id])
   }
 }

@@ -7,7 +7,7 @@ import { IProduct } from '../../interface/iproduct';
 export class Product {
 
 
-  private products:IProduct[] =[{
+  public products:IProduct[] =[{
       id: 1,
       name: 'Manchester United Home Jersey 2024',
       description: 'Official Adidas home jersey with club crest and AEROREADY fabric.',
