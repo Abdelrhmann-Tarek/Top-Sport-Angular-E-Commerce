@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from "@angular/router";
 
 @Component({
@@ -14,4 +14,5 @@ export class NavBar {
 this.isLightMode = !this.isLightMode;
   document.body.classList.toggle('dark-mode', !this.isLightMode);
   }
+  @Input() Layout!:string ;
 }
