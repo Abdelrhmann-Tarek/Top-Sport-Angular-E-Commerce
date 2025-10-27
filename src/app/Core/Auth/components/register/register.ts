@@ -21,7 +21,6 @@ export class Register implements OnInit {
     this.createRegisterForm();
   }
 
-  // ✅ Create the form with controls and custom validator
   createRegisterForm(): void {
     this.registerForm = this.fb.group(
       {
@@ -30,26 +29,22 @@ export class Register implements OnInit {
         password: ['', [Validators.required, Validators.minLength(6)]],
         confirmPassword: ['', Validators.required]
       },
-      { validator: this.passwordMatchValidator } // ✅ custom validator here
-    );
+      { validator: this.passwordMatchValidator } 
   }
 
-  // ✅ Custom Password Match Validator
   passwordMatchValidator(formGroup: AbstractControl): { [key: string]: any } | null {
     const password = formGroup.get('password')?.value;
     const confirmPassword = formGroup.get('confirmPassword')?.value;
     return password === confirmPassword ? null : { mismatch: true };
   }
 
-  // ✅ Easy access to form fields (for template)
   get f() {
     return this.registerForm.controls;
   }
 
-  // ✅ Form submit handler
   onSubmit(): void {
     this.submitted = true;
-      console.log('Submit clicked!'); // <== MUST see this in console
+      console.log('Submit clicked!'); 
 
 
     if (this.registerForm.invalid) {
