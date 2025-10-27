@@ -1,12 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
   selector: 'app-register',
   standalone:true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,FormsModule,CommonModule],
   templateUrl: './register.html',
   styleUrl: './register.css'
 })
