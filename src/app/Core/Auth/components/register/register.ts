@@ -24,12 +24,13 @@ export class Register implements OnInit {
   createRegisterForm(): void {
     this.registerForm = this.fb.group(
       {
-        name: ['', [Validators.required, Validators.minLength(3)]],
+        name: ['', [Validators.required, Validators.minLength(3),Validators.maxLength(20)]],
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(6)]],
         confirmPassword: ['', Validators.required]
       },
       { validator: this.passwordMatchValidator } 
+    );
   }
 
   passwordMatchValidator(formGroup: AbstractControl): { [key: string]: any } | null {
